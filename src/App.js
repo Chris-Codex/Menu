@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useState } from "react";
+import "./css/App.css";
+
+const url = "https://course-api.netlify.api/api/react-tabs-project";
 
 function App() {
+  const [loading, setLoading] = useState(true);
+  const [jobs, setJobs] = useState([]);
+  const [value, setVlue] = useState(0);
+
+  const fetchJobs = async () => {
+    const response = await fetch(url);
+    const newjobs = await response.json();
+    setJobs(newjobs);
+    setLoading(false);
+  };
+
+  useEffect(() => {
+    fetchJobs();
+  }, []);
+
+  if (loading) {
+    return (
+      <section className="section loading">
+        <h1>loading...</h1>
+      </section>
+    );
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <h2>Jobs</h2>
     </div>
   );
 }
