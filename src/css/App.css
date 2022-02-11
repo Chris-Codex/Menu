@@ -1,12 +1,19 @@
 .home-container {
   background-color: #e6f2ff;
-  margin-top: 50px;
+  margin-top: 150px;
   padding: 10px;
 }
 
 .experience {
   font-weight: bolder;
   margin-left: 150px;
+  margin-top: 20px;
+}
+
+.experience-icon {
+  margin-left: 210px;
+  margin-top: -40px;
+  color: aqua;
 }
 
 .title {
@@ -18,10 +25,6 @@
   font-weight: bold;
 }
 
-ul.b {
-  list-style-type: square;
-}
-
 .more-info {
   margin-left: 180px;
 }
@@ -31,5 +34,30 @@ ul.b {
 }
 
 .experience-wrapper {
-  margin-top: 30px;
+  margin-top: -10px;
+}
+
+.btn-groups button {
+  background-color: aqua;
+  border: 1px solid #e6f2ff;
+  color: black;
+  padding: 10px 24px;
+  cursor: pointer;
+  width: 50%;
+  font-weight: bold;
+  display: block;
+  text-transform: capitalize;
+  font-size: 1.25rem;
+  letter-spacing: var(--spacing);
+  margin: 0 0.5rem;
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.btn-groups button:not(:last-child) {
+  border-bottom: none;
+}
+
+.btn-groups button:hover {
+  background-color: #e6f2ff;
 }
