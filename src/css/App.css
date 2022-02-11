@@ -61,3 +61,8 @@
 .btn-groups button:hover {
   background-color: #e6f2ff;
 }
+
+.active-btn {
+  color: var(--clr-primary-5);
+  box-shadow: 0 2px var(--clr-primary-5);
+}

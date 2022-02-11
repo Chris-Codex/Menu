@@ -39,7 +39,7 @@ function App() {
           <div className="col-md-4" style={{ marginTop: "120px" }}>
             {jobs.map((item, index) => {
               return (
-                <div class="btn-groups">
+                <div class={"btn-groups ${index === value && 'active-btn}"}>
                   <button key={item.id} onClick={() => setValue(index)}>
                     {item.company}
                   </button>
